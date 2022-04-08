@@ -39,7 +39,6 @@ module.exports = merge(webpackBaseConfig, {
       {
         test: /\.less$/,
         use: [
-          // MiniCssExtractPlugin.loader,
           {
             loader: 'style-loader',
           },
@@ -60,54 +59,6 @@ module.exports = merge(webpackBaseConfig, {
           },
         ],
       },
-      
-      // 处理一般sass样式，依然使用css模块
-     
-      // 处理字体文件 WOFF
-      {
-        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        use: {
-          loader: 'url-loader',
-          options: { limit: 10000, mimetype: 'application/font-woff' }
-        }
-      },
-      // 处理字体文件 WOFF2
-      {
-        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        use: {
-          loader: 'url-loader',
-          options: { limit: 10000, mimetype: 'application/font-woff' }
-        }
-      },
-      // 处理字体文件 TTF
-      {
-        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {  limit: 10000, mimetype: 'application/octet-stream' }
-        }
-      },
-      // 处理字体文件 EOT
-      {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        use: 'file-loader'
-      },
-      // 处理svg文件 SVG
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: {
-          loader: 'url-loader',
-          options: { limit: 10000, mimetype: 'image/svg+xml' }
-        }
-      },
-      // 处理图片
-      {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
-        use: {
-          loader: 'url-loader',
-          options: { limit: 5000 }
-        }
-      }
     ]
   },
   plugins: [

@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "pretty": true,
     "sourceMap": true,
-    "module": "esnext",
-    "target": "es5",
-    "jsx": "react",
-    "strict": false,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "moduleResolution": "node",
     "baseUrl": "./src",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "noImplicitReturns": false,
-    "removeComments": true,
-    "strictNullChecks": false,
-    "lib": ["es5", "es2015", "dom", "ESNext"]
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "release/app/dist"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/globals.d.ts",
-    "node_modules/@types/**/*.d.ts", "src/utils/http.ts",
-  ],
-  "exclude": ["**/node_modules/*", "**/*.spec.ts"]
+  "exclude": ["test", "release/build", "release/app/dist", "dist"]
 }

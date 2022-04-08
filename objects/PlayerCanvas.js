@@ -30,13 +30,13 @@ class PlayerCanvas {
         }
         if (this._cameraVideo) {
             // 将头像绘制到右下角
-            this._context2d.drawImage(  this._cameraVideo, 
-                                        this._canvasWidth - this._CANMERA_VIDEO_WIDTH, 
-                                        this._canvasHeight - this._CAMERA_VIDEO_HEIGHT,
-                                        this._CANMERA_VIDEO_WIDTH,
-                                        this._CAMERA_VIDEO_HEIGHT,
-                                    )
-            
+            this._context2d.drawImage(this._cameraVideo,
+                this._canvasWidth - this._CANMERA_VIDEO_WIDTH,
+                this._canvasHeight - this._CAMERA_VIDEO_HEIGHT,
+                this._CANMERA_VIDEO_WIDTH,
+                this._CAMERA_VIDEO_HEIGHT,
+            )
+
         }
         requestAnimationFrame(() => {
             this.animationFramehander();
@@ -48,4 +48,4 @@ class PlayerCanvas {
     }
 }
 
-module.exports = PlayerCanvas;
+export default PlayerCanvas;
